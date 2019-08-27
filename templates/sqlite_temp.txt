@@ -1,0 +1,39 @@
+CREATE TABLE items(
+    ID varchar(45) NOT NULL,
+    creation_date int NOT NULL,
+    primary key(ID)
+);
+CREATE TABLE user_info(
+    user_ID varchar(45) NOT NULL,
+    user_name varchar(45) NOT NULL,
+    full_name varchar(45) NOT NULL,
+    verified tinyint(1) NOT NULL,
+    primary key(user_ID),
+    foreign key(user_ID) references items(ID)
+);
+CREATE TABLE activity(
+    ID varchar(45) NOT NULL,
+    likes_count int NOT NULL,
+    last_like int NOT NULL,
+    first_like int NOT NULL,
+    comment_count int NOT NULL,
+    primary key(ID),
+    foreign key(ID) references items(ID)
+);
+CREATE TABLE desc(
+    ID varchar(45) NOT NULL,
+    p_desc text,
+    s_desc text,
+    title text NN,
+    primary key(ID),
+    foreign key(ID) references items(ID)
+);
+CREATE TABLE relations(
+    origin varchar(45) NOT NULL,
+    destination varchar(45) NOT NULL,
+    followed_by tinyint(1) NOT NULL,
+    requested_by tinyint(1) NOT NULL,
+    primary key(ID),
+    foreign key(origin) references items(ID),
+    foreign key(destination) references items(ID)
+);
