@@ -26,21 +26,15 @@ welcome = """
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-  <!--
-    Copyright 2012 Amazon.com, Inc. or its affiliates. All Rights Reserved.
-
-    Licensed under the Apache License, Version 2.0 (the "License"). You may not use this file except in compliance with the License. A copy of the License is located at
-
-        http://aws.Amazon/apache2.0/
-
-    or in the "license" file accompanying this file. This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
-  -->
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <title>Welcome</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   <style>
   body {
     color: #ffffff;
-    background-color: #E0E0E0;
     font-family: Arial, sans-serif;
     font-size:14px;
     -moz-transition-property: text-shadow;
@@ -59,9 +53,6 @@ welcome = """
   a {
     color: #0188cc;
   }
-  .textColumn, .linksColumn {
-    padding: 2em;
-  }
   .textColumn {
     position: absolute;
     top: 0px;
@@ -75,56 +66,124 @@ welcome = """
     background-image: -moz-radial-gradient(left top, circle, #6AF9BD 0%, #00B386 60%);
     background-image: -webkit-gradient(radial, 0 0, 1, 0 0, 500, from(#6AF9BD), to(#00B386));
   }
-  .textColumn p {
-    width: 75%;
-    float:right;
-  }
-  .linksColumn {
+  .menuBar {
     position: absolute;
     top:0px;
-    right: 0px;
-    bottom: 0px;
-    left: 50%;
-
+    left: 0px;
+    right:0px;
+    height: 8%;
     background-color: #E0E0E0;
   }
-
-  h1 {
-    font-size: 500%;
-    font-weight: normal;
-    margin-bottom: 0em;
+  .content {
+    position: absolute;
+    top: 8%;
+    right: 0px;
+    bottom: 0px;
+    left:0px;
+    overflow: hidden;
   }
-  h2 {
-    font-size: 200%;
-    font-weight: normal;
-    margin-bottom: 0em;
-  }
-  ul {
-    padding-left: 1em;
-    margin: 0px;
-  }
-  li {
-    margin: 1em 0em;
+  .icon {
+    margin: 15px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
   }
   </style>
 </head>
 <body id="sample">
-  <div class="textColumn">
-    <h1>Congratulations</h1>
-    <p>Your first AWS Elastic Beanstalk Python Application is now running on your own dedicated environment in the AWS Cloud</p>
-  </div>
-  
-  <div class="linksColumn"> 
-    <h2>What's Next?</h2>
-    <ul>
-    <li><a href="http://docs.amazonwebservices.com/elasticbeanstalk/latest/dg/">AWS Elastic Beanstalk overview</a></li>
-    <li><a href="http://docs.amazonwebservices.com/elasticbeanstalk/latest/dg/index.html?concepts.html">AWS Elastic Beanstalk concepts</a></li>
-    <li><a href="http://docs.amazonwebservices.com/elasticbeanstalk/latest/dg/create_deploy_Python_django.html">Deploy a Django Application to AWS Elastic Beanstalk</a></li>
-    <li><a href="http://docs.amazonwebservices.com/elasticbeanstalk/latest/dg/create_deploy_Python_flask.html">Deploy a Flask Application to AWS Elastic Beanstalk</a></li>
-    <li><a href="http://docs.amazonwebservices.com/elasticbeanstalk/latest/dg/create_deploy_Python_custom_container.html">Customizing and Configuring a Python Container</a></li>
-    <li><a href="http://docs.amazonwebservices.com/elasticbeanstalk/latest/dg/using-features.loggingS3.title.html">Working with Logs</a></li>
-
-    </ul>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light d-flex justify-content-end">
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </nav>
+  <div>
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col"></th>
+          <th scope="col">Username</th>
+          <th scope="col">Full Name</th>
+          <th scope="col">URL</th>
+          <th scope="col">Bio</th>
+          <th scope="col">Posts</th>
+          <th scope="col">Followers</th>
+          <th scope="col">Following</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr scope="row" onclick="window.location='https://instagram.com/the_realest_kyle';">
+          <td><img class="icon" src="assets/kyleicon.jpg"></td>
+          <td>the_realest_kyle</td>
+          <td>Kyle Stephens</td>
+          <td>https://instagram.com/the_realest_kyle</td>
+          <td>My name is Kyle.</td>
+          <td>32</td>
+          <td>272</td>
+          <td>454</td>
+        </tr>
+        <tr scope="row" onclick="window.location='https://instagram.com/livelaughgrub';">
+          <td><img class="icon" src="assets/grubicon.jpg"></td>
+          <td>livelaughgrub</td>
+          <td></td>
+          <td>https://instagram.com/livelaughgrub</td>
+          <td>Just eating my way through the 🌎</td>
+          <td>68</td>
+          <td>321</td>
+          <td>427</td>
+        </tr>
+        <tr scope="row" onclick="window.location='https://instagram.com/toronto_food.tours';">
+          <td><img class="icon" src="assets/torontoicon.jpg"></td>
+          <td>toronto_food.tours</td>
+          <td>Toronto Foodie And Food Tours</td>
+          <td>https://instagram.com/toronto_food.tours</td>
+          <td>Toronto Food Tours🔥 my name is Alex and I take people through the city showing off the best restaurants and dishes Toronto has to offer💯💯</td>
+          <td>10</td>
+          <td>1530</td>
+          <td>2118</td>
+        </tr>
+        <tr scope="row" onclick="window.location='https://instagram.com/imafoodpiggie';">
+          <td><img class="icon" src="assets/piggieicon.jpg"></td>
+          <td>imafoodpiggie</td>
+          <td></td>
+          <td>https://instagram.com/imafoodpiggie</td>
+          <td>Life of two hungry piggies🐷</td>
+          <td>9</td>
+          <td>776</td>
+          <td>750</td>
+        </tr>
+        <tr scope="row" onclick="window.location='https://instagram.com/foodwithemmanbrooklyn';">
+          <td><img class="icon" src="assets/emmaicon.jpg"></td>
+          <td>foodwithemmanbrooklyn</td>
+          <td>Brooklyn + Emma</td>
+          <td>https://instagram.com/foodwithemmanbrooklyn</td>
+          <td>📍Toronto<br>📨 DM for collabs and more!<br>🤠 @_brooklynwong @_emma_feng_</td>
+          <td>15</td>
+          <td>141</td>
+          <td>68</td>
+        </tr>
+        <tr scope="row" onclick="window.location='https://instagram.com/the.scientific.philosopher';">
+          <td><img class="icon" src="assets/scienceicon.jpg"></td>
+          <td>the.scientific.philosopher</td>
+          <td>Science & Such | 📚</td>
+          <td>https://instagram.com/the.scientific.philosopher</td>
+          <td>Some scientific philosophy and philosophical science for all you lovely lovers of wisdom 🤔🌌<br>scientificphilosopher.tumblr.com</td>
+          <td>129</td>
+          <td>757,194</td>
+          <td>293</td>
+        </tr>
+        <tr scope="row" onclick="window.location='https://instagram.com/theellenshow';">
+          <td><img class="icon" src="assets/ellenicon.jpg"></td>
+          <td>theellenshow</td>
+          <td>Ellen DeGeneres</td>
+          <td>https://instagram.com/theellenshow</td>
+          <td>@theellenfund<br>@ellentube<br>@edbyellen<br>@theellenshop<br>ellentube.com</td>
+          <td>7731</td>
+          <td>76,472,944</td>
+          <td>369</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </body>
 </html>
