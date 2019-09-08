@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Welcome</title>
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4-4.1.1/jq-3.3.1/jszip-2.5.0/dt-1.10.18/b-1.5.6/b-html5-1.5.6/r-2.2.2/datatables.min.css"/>
+ 
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/v/bs4-4.1.1/jq-3.3.1/jszip-2.5.0/dt-1.10.18/b-1.5.6/b-html5-1.5.6/r-2.2.2/datatables.min.js"></script>
+  <style>
+  .icon {
+    margin: 15px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+  }
+  </style>
+</head>
+<body id="sample">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light d-flex justify-content-end">
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Instagram Search" aria-label="Instagram Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </nav>
+  <div>
+    <table id="dataTable" class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col"></th>
+          <th scope="col">Username</th>
+          <th scope="col">Full Name</th>
+          <th scope="col">URL</th>
+          <th scope="col">Bio</th>
+          <th scope="col">Posts</th>
+          <th scope="col">Followers</th>
+          <th scope="col">Following</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr scope="row" onclick="window.location='https://instagram.com/the_realest_kyle';">
+          <td><img class="icon" src="/assets/kyleicon.jpg"></td>
+          <td>the_realest_kyle</td>
+          <td>Kyle Stephens</td>
+          <td>https://instagram.com/the_realest_kyle</td>
+          <td>My name is Kyle.</td>
+          <td>32</td>
+          <td>272</td>
+          <td>454</td>
+        </tr>
+        <tr scope="row" onclick="window.location='https://instagram.com/livelaughgrub';">
+          <td><img class="icon" src="/assets/grubicon.jpg"></td>
+          <td>livelaughgrub</td>
+          <td></td>
+          <td>https://instagram.com/livelaughgrub</td>
+          <td>Just eating my way through the 🌎</td>
+          <td>68</td>
+          <td>321</td>
+          <td>427</td>
+        </tr>
+        <tr scope="row" onclick="window.location='https://instagram.com/toronto_food.tours';">
+          <td><img class="icon" src="/assets/torontoicon.jpg"></td>
+          <td>toronto_food.tours</td>
+          <td>Toronto Foodie And Food Tours</td>
+          <td>https://instagram.com/toronto_food.tours</td>
+          <td>Toronto Food Tours🔥 my name is Alex and I take people through the city showing off the best restaurants and dishes Toronto has to offer💯💯</td>
+          <td>10</td>
+          <td>1530</td>
+          <td>2118</td>
+        </tr>
+        <tr scope="row" onclick="window.location='https://instagram.com/imafoodpiggie';">
+          <td><img class="icon" src="/assets/piggieicon.jpg"></td>
+          <td>imafoodpiggie</td>
+          <td></td>
+          <td>https://instagram.com/imafoodpiggie</td>
+          <td>Life of two hungry piggies🐷</td>
+          <td>9</td>
+          <td>776</td>
+          <td>750</td>
+        </tr>
+        <tr scope="row" onclick="window.location='https://instagram.com/foodwithemmanbrooklyn';">
+          <td><img class="icon" src="/assets/emmaicon.jpg"></td>
+          <td>foodwithemmanbrooklyn</td>
+          <td>Brooklyn + Emma</td>
+          <td>https://instagram.com/foodwithemmanbrooklyn</td>
+          <td>📍Toronto<br>📨 DM for collabs and more!<br>🤠 @_brooklynwong @_emma_feng_</td>
+          <td>15</td>
+          <td>141</td>
+          <td>68</td>
+        </tr>
+        <tr scope="row" onclick="window.location='https://instagram.com/the.scientific.philosopher';">
+          <td><img class="icon" src="/assets/scienceicon.jpg"></td>
+          <td>the.scientific.philosopher</td>
+          <td>Science & Such | 📚</td>
+          <td>https://instagram.com/the.scientific.philosopher</td>
+          <td>Some scientific philosophy and philosophical science for all you lovely lovers of wisdom 🤔🌌<br>scientificphilosopher.tumblr.com</td>
+          <td>129</td>
+          <td>757,194</td>
+          <td>293</td>
+        </tr>
+        <tr scope="row" onclick="window.location='https://instagram.com/theellenshow';">
+          <td><img class="icon" src="/assets/ellenicon.jpg"></td>
+          <td>theellenshow</td>
+          <td>Ellen DeGeneres</td>
+          <td>https://instagram.com/theellenshow</td>
+          <td>@theellenfund<br>@ellentube<br>@edbyellen<br>@theellenshop<br>ellentube.com</td>
+          <td>7731</td>
+          <td>76,472,944</td>
+          <td>369</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('#dataTable').DataTable({
+        dom: "<'row'<'col-sm-12 col-md-6'B><'col-sm-12 col-md-6'f>>rt<'row'<'col-sm-12 col-md-6'i><'col-sm-12 col-md-6'p>>",
+        buttons: [
+          'copy', 'excel', 'csv', 'pdf'
+        ],
+        language: {
+          search: "Filter:",
+          searchPlaceholder: "Filter... "
+        },
+        "columnDefs": [
+          {
+            "orderable": false,
+            "searchable": false,
+            "targets": [0, 3, 4]
+          }
+        ]
+      }).order([1, 'asc']).draw();
+    } );
+  </script>
+</body>
+</html>

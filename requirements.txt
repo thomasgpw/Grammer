@@ -1,0 +1,4 @@
+Flask==0.12
+Flask-Cors==3.0.2
+instagram-scraper==1.7.1
+tqdm==4.35.0
